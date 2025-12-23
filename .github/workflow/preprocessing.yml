@@ -27,11 +27,3 @@ jobs:
       - name: Run preprocessing script
         run: |
           python preprocessing/automate_Muhammad_Faiz_Munif_Billah.py
-
-      - name: Commit processed dataset
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add preprocessing/namadataset_preprocessing/titanic_clean.csv
-          git commit -m "Automated preprocessing update" || echo "No changes to commit"
-          git push
